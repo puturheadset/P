@@ -42,7 +42,7 @@ header .nav-icons img:hover {
   opacity:1; 
 }
 
-.header-space { height:94px; } /* فاصله هدر */
+.header-space { height:50px; } /* فاصله هدر */
 
 /* ===== LAST RELEASE TITLE ===== */
 .last-release-title {
