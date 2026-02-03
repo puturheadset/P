@@ -1,0 +1,102 @@
+/* ===== GLOBAL ===== */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Lexend',sans-serif; background:#000; color:#fff; }
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  border-bottom:1px dashed #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+/* لوگو سمت چپ */
+header .logo-text {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  flex-shrink:0;
+}
+
+/* آیکون‌ها سمت راست */
+header .nav-icons {
+  display: flex;
+  gap: 24px;
+  flex-shrink:0;
+}
+
+header .nav-icons img {
+  width: 26px;
+  height: 26px;
+  filter: invert(100%);
+  opacity:0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+header .nav-icons img:hover { transform: scale(1.15); opacity:1; }
+
+.header-space { height:94px; }
+
+/* ===== LAST RELEASE ===== */
+.last-release {
+  background-color: #111; /* کمی روشن‌تر از بک‌گراند */
+  border-radius: 20px; /* حاشیه کروی */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6); /* استایل برآمده */
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+/* IMAGE */
+.image-box {
+  flex: 0 0 48%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 400px; /* حداکثر عرض دسکتاپ */
+  height: auto;
+  border-radius: 14px;
+  display: block;
+}
+
+/* TEXT */
+.text-box {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-link { text-decoration:none; color:#fff; line-height:1.05; }
+.title-link .small { font-size:18px; font-weight:400; }
+.title-link .big { font-size:58px; font-weight:700; letter-spacing:3px; }
+.subtitle { margin-top:8px; font-size:15px; color:#bbb; }
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  main, .last-release {
+    flex-direction: column; /* ستون‌چین روی موبایل */
+    gap:16px;
+    padding:16px;
+  }
+  .image-box, .text-box { flex:0 0 100%; }
+  .image-box img { max-width:100%; }
+  .title-link .big { font-size:38px; letter-spacing:2px; }
+  .subtitle { font-size:14px; }
+  header { flex-direction: row; justify-content: space-between; padding:12px 16px; }
+  header .nav-icons { gap:16px; }
+  header .nav-icons img { width:22px; height:22px; }
+}
