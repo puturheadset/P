@@ -105,3 +105,25 @@ header .nav-icons img:hover {
   header .nav-icons { gap:16px; }
   header .nav-icons img { width:22px; height:22px; }
 }
+
+/* ===== INFO SECTION ===== */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;           /* فاصله کم برای کنار هم ماندن */
+  margin: 20px;
+  flex-wrap: nowrap;   /* هیچ وقت ستون‌چین نشوند */
+  overflow-x: auto;    /* اگر جا کم شد، اسکرول افقی ایجاد شود */
+}
+
+.info-box {
+  flex: 0 0 30%;       /* هر باکس 30٪ عرض */
+  background-color: #111;     
+  border-radius: 10px;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  min-width: 90px;      /* حداقل عرض */
+}
+
