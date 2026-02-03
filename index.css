@@ -29,50 +29,47 @@ header .nav-icons img:hover { transform: scale(1.15); opacity:1; }
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 28px;
+  justify-content: flex-start; /* کنار هم، عکس سمت چپ */
+  gap: 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-  flex-wrap: nowrap; /* کنار هم دسکتاپ */
-  margin: 40px 20px;
+  margin: 20px;
 }
 
 /* IMAGE */
 .image-box {
-  flex: 1;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
+  flex: 0 0 auto; /* عرض ثابت برای عکس */
+  max-width: 120px; /* اندازه مناسب موبایل */
 }
 .image-box img {
   width: 100%;
   height: auto;
-  border-radius: 14px;
+  border-radius: 12px;
   display: block;
 }
 
 /* TEXT */
 .text-box {
-  flex: 1;
+  flex: 1; /* متن فضای باقی‌مانده را بگیرد */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .title-link { text-decoration:none; color:#fff; line-height:1.05; }
-.title-link .small { font-size:18px; font-weight:400; }
-.title-link .big { font-size:58px; font-weight:700; letter-spacing:3px; }
-.subtitle { margin-top:8px; font-size:15px; color:#bbb; }
+.title-link .small { font-size:16px; font-weight:400; }
+.title-link .big { font-size:28px; font-weight:700; letter-spacing:2px; }
+.subtitle { margin-top:6px; font-size:13px; color:#bbb; }
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
   .last-release {
-    flex-direction: column;
+    flex-direction: row; /* همیشه کنار هم */
     padding:16px;
-    gap:16px;
+    gap:12px;
   }
-  .image-box, .text-box { flex: 1 0 100%; max-width: 100%; }
-  .title-link .big { font-size:38px; letter-spacing:2px; }
-  .subtitle { font-size:14px; }
+  .image-box { max-width:100px; }
+  .title-link .big { font-size:24px; }
+  .subtitle { font-size:12px; }
   header { flex-direction: row; justify-content: space-between; padding:12px 16px; }
   header .nav-icons { gap:16px; }
   header .nav-icons img { width:22px; height:22px; }
