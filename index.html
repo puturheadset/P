@@ -27,7 +27,6 @@ header {
   z-index: 1000;
 }
 
-/* لوگو سمت چپ */
 header .logo-text {
   font-size: 18px;
   font-weight: 500;
@@ -35,7 +34,6 @@ header .logo-text {
   flex-shrink:0;
 }
 
-/* آیکون‌ها سمت راست */
 header .nav-icons {
   display: flex;
   gap: 24px;
@@ -50,30 +48,36 @@ header .nav-icons img {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-header .nav-icons img:hover {
-  transform: scale(1.15);
-  opacity:1;
-}
+header .nav-icons img:hover { transform: scale(1.15); opacity:1; }
 
-/* فاصله هدر */
-.header-space { height: 94px; }
+.header-space { height:94px; }
 
-/* ===== CONTENT ===== */
+/* ===== MAIN CONTENT ===== */
 main {
-  padding:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap:28px;
-  flex-wrap: wrap;
+  padding:22px;
+  flex-wrap: nowrap; /* دسکتاپ کنار هم */
 }
 
-/* تصویر */
-.image-box { flex: 0 0 48%; }
-.image-box img { width:100%; border-radius:14px; display:block; }
+/* IMAGE */
+.image-box {
+  flex: 0 0 48%;
+}
 
-/* متن */
-.text-box { flex:0 0 48%; }
+.image-box img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+/* TEXT */
+.text-box {
+  flex: 0 0 48%;
+}
+
 .title-link { text-decoration:none; color:#fff; line-height:1.05; }
 .title-link .small { font-size:18px; font-weight:400; }
 .title-link .big { font-size:58px; font-weight:700; letter-spacing:3px; }
@@ -81,18 +85,14 @@ main {
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
-  header { flex-direction: row; justify-content: space-between; padding:12px 16px; }
-  header .nav-icons { gap:16px; }
-  
   main {
-    flex-direction: column;
+    flex-direction: column; /* ستون‌چین روی موبایل */
     gap:16px;
     padding:16px;
   }
-  .image-box, .text-box { flex:0 0 100%; }
+  .image-box, .text-box { flex: 0 0 100%; }
   .title-link .big { font-size:38px; letter-spacing:2px; }
   .subtitle { font-size:14px; }
-  .nav-icons img { width:22px; height:22px; }
 }
 </style>
 </head>
@@ -100,10 +100,7 @@ main {
 <body>
 
 <header>
-  <!-- سمت چپ لوگو -->
   <div class="logo-text">Put Your Headset On</div>
-
-  <!-- سمت راست آیکون‌ها -->
   <div class="nav-icons">
     <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/app.png" alt="Home"></a>
     <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/social-media.png" alt="Social"></a>
@@ -115,11 +112,7 @@ main {
 
 <main>
   <div class="image-box">
-    <img 
-      src="https://raw.githubusercontent.com/puturheadset/P/main/images/IMG_0542.jpeg"
-      alt="Album"
-      loading="lazy"
-    >
+    <img src="https://raw.githubusercontent.com/puturheadset/P/main/images/IMG_0542.jpeg" alt="Album" loading="lazy">
   </div>
 
   <div class="text-box">
