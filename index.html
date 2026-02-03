@@ -3,150 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Put Your Headset On</title>
 
 <!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  body {
-    margin: 0;
-    font-family: 'Lexend', sans-serif;
-    background: #000;
-    color: #fff;
-  }
+body {
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  background: #000;
+  color: #fff;
+}
 
-  /* ===== HEADER ===== */
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #000;
-    z-index: 1000;
-    text-align: center;
-    padding: 14px 0 12px;
-    border-bottom: 1px dashed #444;
-  }
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px dashed #444;
+  text-align: center;
+  padding: 12px 0 10px;
+  z-index: 1000;
+}
 
-  header h1 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
-  .nav-icons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-  }
+/* Icons */
+.nav-icons {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
 
-  .nav-icons a img {
-    width: 26px;
-    height: 26px;
-    filter: invert(100%);
-    opacity: 0.85;
-    transition: opacity 0.2s, transform 0.2s;
-  }
+.nav-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
-  .nav-icons a img:hover {
-    opacity: 1;
-    transform: scale(1.15);
-  }
+.nav-icons img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
 
-  .header-space {
-    height: 110px;
-  }
+/* spacer for fixed header */
+.header-space {
+  height: 96px;
+}
 
-  /* ===== BODY ===== */
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    padding: 20px;
+/* ===== CONTENT ===== */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 20px;
+}
+
+/* image */
+.image-box {
+  flex: 0 0 42%;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+/* text */
+.text-box {
+  flex: 0 0 58%;
+}
+
+.title-link {
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.05;
+}
+
+.title-link .small {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.title-link .big {
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #bbb;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .section {
+    gap: 14px;
+    padding: 16px;
   }
 
   .image-box {
-    flex: 1;
-    max-width: 45%;
-  }
-
-  .image-box img {
-    width: 100%;
-    border-radius: 12px;
+    flex: 0 0 40%;
   }
 
   .text-box {
-    flex: 1;
-    max-width: 45%;
-  }
-
-  .title-link {
-    color: #fff;
-    text-decoration: none;
-    line-height: 1.05;
-  }
-
-  .title-link .small {
-    font-size: 22px;
-    font-weight: 400;
+    flex: 0 0 60%;
   }
 
   .title-link .big {
-    font-size: 64px;
-    font-weight: 700;
-    letter-spacing: 3px;
+    font-size: 36px;
+    letter-spacing: 2px;
   }
 
   .subtitle {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #ccc;
+    font-size: 14px;
   }
 
-  /* ===== MOBILE ===== */
-  @media (max-width: 700px) {
-    header h1 {
-      font-size: 18px;
-    }
-
-    .nav-icons {
-      gap: 20px;
-    }
-
-    .nav-icons a img {
-      width: 22px;
-      height: 22px;
-    }
-
-    .content {
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .image-box,
-    .text-box {
-      max-width: 100%;
-    }
-
-    .title-link .small {
-      font-size: 18px;
-    }
-
-    .title-link .big {
-      font-size: 40px;
-    }
-
-    .subtitle {
-      font-size: 16px;
-    }
+  .nav-icons img {
+    width: 22px;
+    height: 22px;
   }
+}
 </style>
 </head>
 
@@ -163,9 +159,13 @@
 
 <div class="header-space"></div>
 
-<section class="content">
+<section class="section">
   <div class="image-box">
-    <img src="https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0391.png" alt="Album Image">
+    <img 
+      src="https://raw.githubusercontent.com/puturheadset/P/main/images/IMG_0391.png"
+      alt="Album"
+      loading="lazy"
+    >
   </div>
 
   <div class="text-box">
