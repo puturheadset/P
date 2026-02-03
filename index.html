@@ -14,7 +14,6 @@
     padding: 0;
     background-color: #000;
     color: #fff;
-    line-height: 1.2;
   }
 
   /* هدر ثابت */
@@ -31,32 +30,31 @@
   }
 
   .logo {
-    font-size: 32px;
+    font-size: 26px; /* کمی کوچک‌تر شد */
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
-  /* منو لینک‌ها */
-  .nav-links {
+  /* آیکون‌های مینیمال */
+  .icon-links {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    font-size: 16px;
+    gap: 20px;
   }
 
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+  .icon-links a img {
+    width: 28px; /* سایز لوگو */
+    height: 28px;
+    filter: invert(100%); /* سفید */
+    transition: transform 0.2s;
   }
 
-  .nav-links a:hover {
-    color: #ccc;
+  .icon-links a img:hover {
+    transform: scale(1.2);
   }
 
   .spacer {
-    height: 120px; /* فاصله برای هدر بزرگ‌تر با لینک‌ها */
+    height: 110px; /* فاصله برای هدر */
   }
 
   /* بخش body */
@@ -84,7 +82,7 @@
     display: block;
     text-align: left;
     line-height: 1.1;
-    color: #fff; /* رنگ سفید */
+    color: #fff;
     text-decoration: none;
   }
 
@@ -123,9 +121,9 @@
     .body-right p.subtitle {
       font-size: 16px;
     }
-    .nav-links {
-      gap: 12px;
-      font-size: 14px;
+    .icon-links a img {
+      width: 22px;
+      height: 22px;
     }
   }
 </style>
@@ -134,10 +132,10 @@
 
   <div class="header">
     <div class="logo">Put Your Headset On</div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
+    <div class="icon-links">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Home_icon.svg" alt="Home"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Info_icon.svg" alt="About"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Contact_icon.svg" alt="Contact"></a>
     </div>
   </div>
 
