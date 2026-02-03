@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Album – Put Your Headset On</title>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px dashed #444;
+  text-align: center;
+  padding: 12px 0 10px;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* icons */
+.nav-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nav-icons img {
+  width: 26px;
+  height: 26px;
+  filter: invert(100%);
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-icons img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* space for fixed header */
+.header-space {
+  height: 94px;
+}
+
+/* ===== BODY PLACEHOLDER ===== */
+.page-body {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 16px;
+  }
+
+  .nav-icons img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .page-body {
+    padding: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Put Your Headset On</h1>
+  <div class="nav-icons">
+    <a href="index.html">
+      <img src="https://raw.githubusercontent.com/puturheadset/P/main/images/app.png" alt="Home">
+    </a>
+    <a href="#">
+      <img src="https://raw.githubusercontent.com/puturheadset/P/main/images/social-media.png" alt="Social">
+    </a>
+    <a href="#">
+      <img src="https://raw.githubusercontent.com/puturheadset/P/main/images/mobile.png" alt="About">
+    </a>
+  </div>
+</header>
+
+<div class="header-space"></div>
+
+<!-- BODY (فعلاً خالی) -->
+<main class="page-body">
+  <!-- content will go here -->
+</main>
+
+</body>
+</html>
