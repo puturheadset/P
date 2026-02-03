@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Put Your Headset On</title>
+
+<!-- فونت Libre Baskerville -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
+  /* تنظیمات پایه */
   body {
-    font-family: Tahoma, sans-serif;
+    font-family: 'Libre Baskerville', serif;
     margin: 0;
     padding: 0;
-    background-color: #000; /* پس زمینه مشکی */
-    color: #fff;           /* متن سفید */
-    direction: rtl;
+    background-color: #000; /* پس‌زمینه مشکی */
+    color: #fff;            /* متن سفید */
+    line-height: 1.6;
+    text-align: center;
   }
 
   /* هدر با لوگو در مرکز */
@@ -20,28 +26,25 @@
     justify-content: center;
     align-items: center;
     height: 100px;
-    border-bottom: 1px solid #444;
-    text-align: center;
+    border-bottom: 1px dashed #555; /* خط چین پایین هدر */
   }
 
   .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #fff; /* حتما سفید */
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
   }
 
   /* محتوای اصلی */
   .content {
     padding: 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: center;
+    font-size: 18px;
   }
 
   /* دکمه نمونه */
   .btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 24px;
     margin-top: 20px;
     background: #fff;
     color: #000;
@@ -59,10 +62,13 @@
   /* رسپانسیو برای موبایل */
   @media (max-width: 600px) {
     .logo {
-      font-size: 22px;
+      font-size: 24px;
     }
     .content {
-      font-size: 14px;
+      font-size: 16px;
+    }
+    .btn {
+      padding: 10px 20px;
     }
   }
 </style>
@@ -74,9 +80,9 @@
   </div>
 
   <div class="content">
-    <p>سلام! این صفحه موبایل‌پسند و مینیمال است.</p>
-    <p>هدر در مرکز و پس‌زمینه کاملاً مشکی.</p>
-    <a href="#" class="btn">دکمه نمونه</a>
+    <p>Welcome! This is a minimal, mobile-friendly page with a black background and a centered header.</p>
+    <p>The font for the entire website is Libre Baskerville, giving a classic and elegant look.</p>
+    <a href="#" class="btn">Sample Button</a>
   </div>
 
 </body>
