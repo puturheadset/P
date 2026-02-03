@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Put Your Headset On</title>
+
+<!-- فونت Lexend -->
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
 <style>
   body {
@@ -12,65 +14,111 @@
     padding: 0;
     background-color: #000;
     color: #fff;
+    line-height: 1.6;
     text-align: center;
   }
 
-  .top-section {
+  /* هدر ثابت */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
     display: flex;
-    flex-wrap: wrap; /* برای موبایل کنار هم نماند */
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    background-color: #000;
     border-bottom: 1px dashed #555;
+    z-index: 1000;
   }
 
-  .left {
-    flex: 1 1 150px; /* حداقل 150px و کشسان */
-    max-width: 50%;
-    padding: 10px;
+  .logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
   }
 
-  .left img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  /* spacer برای جلوگیری از پوشانده شدن محتوا توسط هدر */
+  .spacer {
+    height: 80px;
   }
 
-  .right {
+  /* بخش body با دو نصفه */
+  .body-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .body-left, .body-right {
     flex: 1 1 150px;
     max-width: 50%;
     padding: 10px;
   }
 
-  .right .logo {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 10px;
+  .body-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
 
-  /* رسپانسیو موبایل: عکس و متن روی هم بیفتن */
+  .body-right p {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  /* رسپانسیو موبایل */
   @media (max-width: 600px) {
-    .top-section {
-      flex-direction: column;
-    }
-    .left, .right {
-      max-width: 100%;
-    }
-    .right .logo {
+    .logo {
       font-size: 24px;
     }
+    .body-left, .body-right {
+      max-width: 100%;
+    }
+    .body-right p {
+      font-size: 16px;
+      text-align: center;
+    }
   }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: #ccc;
+  }
+
 </style>
 </head>
 <body>
 
-  <div class="top-section">
-    <div class="left">
-      <img src="https://drive.google.com/uc?export=view&id=1STBQmcpCBpPP1U3cpZDb7RFVXfE1ZAb0" alt="Logo Image">
+  <div class="header">
+    <div class="logo">Put Your Headset On</div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="body-section">
+    <div class="body-left">
+      <img src="https://drive.google.com/uc?export=view&id=1STBQmcpCBpPP1U3cpZDb7RFVXfE1ZAb0" alt="Sample Image">
     </div>
-    <div class="right">
-      <div class="logo">Put Your Headset On</div>
-      <p>Welcome to our minimal mobile-friendly site.</p>
+    <div class="body-right">
+      <p>Welcome to our minimal site! This section has an image on the left and text on the right.</p>
+      <p>Use this space to introduce content, products, or any description.</p>
+      <a href="#" class="btn">Learn More</a>
     </div>
   </div>
 
