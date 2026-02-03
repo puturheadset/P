@@ -11,11 +11,7 @@
 <style>
 * { box-sizing: border-box; margin:0; padding:0; }
 
-body { 
-  font-family:'Lexend', sans-serif; 
-  background:#000; 
-  color:#fff; 
-}
+body { font-family:'Lexend',sans-serif; background:#000; color:#fff; }
 
 /* ===== HEADER ===== */
 header {
@@ -24,27 +20,31 @@ header {
   width: 100%;
   background: #000;
   border-bottom:1px dashed #444;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
   z-index: 1000;
 }
 
+/* لوگو سمت چپ */
 header .logo-text {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
+  flex-shrink:0;
 }
 
+/* آیکون‌ها سمت راست */
 header .nav-icons {
-  display:flex;
-  gap:24px;
+  display: flex;
+  gap: 24px;
+  flex-shrink:0;
 }
 
 header .nav-icons img {
-  width:26px;
-  height:26px;
+  width: 26px;
+  height: 26px;
   filter: invert(100%);
   opacity:0.85;
   transition: transform 0.2s ease, opacity 0.2s ease;
@@ -52,11 +52,11 @@ header .nav-icons img {
 
 header .nav-icons img:hover {
   transform: scale(1.15);
-  opacity: 1;
+  opacity:1;
 }
 
 /* فاصله هدر */
-.header-space { height:94px; }
+.header-space { height: 94px; }
 
 /* ===== CONTENT ===== */
 main {
@@ -69,61 +69,30 @@ main {
 }
 
 /* تصویر */
-.image-box {
-  flex: 0 0 48%;
-}
-
-.image-box img {
-  width:100%;
-  border-radius:14px;
-  display:block;
-}
+.image-box { flex: 0 0 48%; }
+.image-box img { width:100%; border-radius:14px; display:block; }
 
 /* متن */
-.text-box {
-  flex: 0 0 48%;
-}
-
-.title-link {
-  text-decoration:none;
-  color:#fff;
-  line-height:1.05;
-}
-
+.text-box { flex:0 0 48%; }
+.title-link { text-decoration:none; color:#fff; line-height:1.05; }
 .title-link .small { font-size:18px; font-weight:400; }
 .title-link .big { font-size:58px; font-weight:700; letter-spacing:3px; }
-
-.subtitle {
-  margin-top:8px;
-  font-size:15px;
-  color:#bbb;
-}
+.subtitle { margin-top:8px; font-size:15px; color:#bbb; }
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  header .nav-icons {
-    margin-top:8px;
-    gap:16px;
-  }
+  header { flex-direction: row; justify-content: space-between; padding:12px 16px; }
+  header .nav-icons { gap:16px; }
+  
   main {
     flex-direction: column;
     gap:16px;
     padding:16px;
   }
-  .image-box, .text-box {
-    flex: 0 0 100%;
-  }
-  .title-link .big {
-    font-size:38px;
-    letter-spacing:2px;
-  }
+  .image-box, .text-box { flex:0 0 100%; }
+  .title-link .big { font-size:38px; letter-spacing:2px; }
   .subtitle { font-size:14px; }
-  header .logo-text { margin-bottom:6px; }
-  header .nav-icons img { width:22px; height:22px; }
+  .nav-icons img { width:22px; height:22px; }
 }
 </style>
 </head>
@@ -131,10 +100,10 @@ main {
 <body>
 
 <header>
-  <!-- سمت چپ: لوگو -->
+  <!-- سمت چپ لوگو -->
   <div class="logo-text">Put Your Headset On</div>
 
-  <!-- سمت راست: آیکون‌ها -->
+  <!-- سمت راست آیکون‌ها -->
   <div class="nav-icons">
     <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/app.png" alt="Home"></a>
     <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/social-media.png" alt="Social"></a>
