@@ -14,7 +14,7 @@
     padding: 0;
     background-color: #000;
     color: #fff;
-    line-height: 1.6;
+    line-height: 1.2;
   }
 
   /* هدر ثابت */
@@ -61,42 +61,32 @@
     border-radius: 10px;
   }
 
-  /* تیتر بزرگ لینک‌دار */
-  .body-right a.title-link {
-    font-size: 32px;
+  /* تیتر با دو خط */
+  .body-right .title {
+    display: block;
+    text-align: left;
+    line-height: 1.1;
+  }
+
+  .body-right .title .line1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .body-right .title .line2 {
+    font-size: 60px;
     font-weight: 700;
-    color: #fff;
-    text-decoration: none;
+    letter-spacing: 2px;
   }
 
-  .body-right a.title-link:hover {
-    text-decoration: underline;
-  }
-
-  .body-right p {
-    font-size: 18px;
-    margin-top: 10px;
+  .body-right p.subtitle {
+    font-size: 20px;
+    margin-top: 8px;
+    color: #ccc;
     text-align: left;
   }
 
-  .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    margin-top: 20px;
-    background: #fff;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .btn:hover {
-    background: #ccc;
-  }
-
-  /* موبایل: عکس و متن کنار هم، تیتر بزرگ کوچک شود */
+  /* موبایل */
   @media (max-width: 600px) {
     .body-section {
       gap: 10px;
@@ -104,11 +94,14 @@
     .body-left, .body-right {
       max-width: 45%;
     }
-    .body-right a.title-link {
-      font-size: 22px;
+    .body-right .title .line1 {
+      font-size: 18px;
     }
-    .body-right p {
-      font-size: 14px;
+    .body-right .title .line2 {
+      font-size: 36px;
+    }
+    .body-right p.subtitle {
+      font-size: 16px;
     }
   }
 </style>
@@ -126,10 +119,11 @@
       <img src="https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0391.png" alt="Sample Image">
     </div>
     <div class="body-right">
-      <a href="https://example.com" class="title-link">The HASTI</a>
-      <p>Welcome to our minimal site! This section has an image on the left and a large linked title on the right.</p>
-      <p>Use this space to describe your project, product, or any content.</p>
-      <a href="#" class="btn">Learn More</a>
+      <a href="https://example.com" class="title">
+        <span class="line1">The</span><br>
+        <span class="line2">HASTI</span>
+      </a>
+      <p class="subtitle">The Hasti Album</p>
     </div>
   </div>
 
