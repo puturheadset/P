@@ -88,16 +88,16 @@
     background: #ccc;
   }
 
-  /* رسپانسیو موبایل: کنار هم بمانند با اسکرول افقی */
+  /* روش ۱: کنار هم با اسکرول افقی روی موبایل */
   @media (max-width: 600px) {
     .body-section {
-      flex-wrap: nowrap;
-      overflow-x: auto;
+      flex-wrap: nowrap;  /* کنار هم بمونن */
+      overflow-x: auto;   /* اسکرول افقی فعال */
       padding: 10px;
     }
     .body-left, .body-right {
-      max-width: 300px; /* اندازه کمتر برای موبایل */
-      flex: 0 0 auto;
+      flex: 0 0 300px; /* اندازه ثابت کمتر برای موبایل */
+      max-width: 300px;
     }
     .body-right p {
       font-size: 16px;
