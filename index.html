@@ -9,16 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Lexend', sans-serif;
-  background: #000;
-  color: #fff;
-}
+* { box-sizing: border-box; }
+body { margin:0; font-family:'Lexend',sans-serif; background:#000; color:#fff; }
 
 /* ===== HEADER ===== */
 header {
@@ -27,27 +19,25 @@ header {
   width: 100%;
   background: #000;
   border-bottom: 1px dashed #444;
-  text-align: center;
-  padding: 12px 0 10px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1000;
 }
 
-header h1 {
-  margin: 0;
+header .logo-text {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
-/* icons */
-.nav-icons {
-  margin-top: 10px;
+header .nav-icons {
   display: flex;
-  justify-content: center;
   gap: 24px;
 }
 
-.nav-icons img {
+header .nav-icons img {
   width: 26px;
   height: 26px;
   filter: invert(100%);
@@ -55,92 +45,34 @@ header h1 {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.nav-icons img:hover {
+header .nav-icons img:hover {
   transform: scale(1.15);
   opacity: 1;
 }
 
 /* space for fixed header */
-.header-space {
-  height: 94px;
-}
+.header-space { height: 94px; }
 
 /* ===== CONTENT ===== */
-.section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  padding: 22px;
-}
-
-/* image */
-.image-box {
-  flex: 0 0 48%;
-}
-
-.image-box img {
-  width: 100%;
-  border-radius: 14px;
-  display: block;
-}
-
-/* text */
-.text-box {
-  flex: 0 0 52%;
-}
-
-.title-link {
-  text-decoration: none;
-  color: #fff;
-  line-height: 1.05;
-}
-
-.title-link .small {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.title-link .big {
-  font-size: 58px;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.subtitle {
-  margin-top: 8px;
-  font-size: 15px;
-  color: #bbb;
-}
+.section { display:flex; align-items:center; justify-content:center; gap:28px; padding:22px; }
+.image-box { flex:0 0 48%; }
+.image-box img { width:100%; border-radius:14px; display:block; }
+.text-box { flex:0 0 52%; }
+.title-link { text-decoration:none; color:#fff; line-height:1.05; }
+.title-link .small { font-size:18px; font-weight:400; }
+.title-link .big { font-size:58px; font-weight:700; letter-spacing:3px; }
+.subtitle { margin-top:8px; font-size:15px; color:#bbb; }
 
 /* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .section {
-    gap: 16px;
-    padding: 16px;
-  }
-
-  .image-box {
-    flex: 0 0 50%;
-  }
-
-  .text-box {
-    flex: 0 0 50%;
-  }
-
-  .title-link .big {
-    font-size: 38px;
-    letter-spacing: 2px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-  }
-
-  .nav-icons img {
-    width: 22px;
-    height: 22px;
-  }
+@media (max-width: 768px){
+  header { flex-direction: column; align-items: center; padding:12px 16px; }
+  header .nav-icons { margin-top:8px; gap:16px; }
+  .section { gap:16px; padding:16px; flex-direction: column; }
+  .image-box, .text-box { flex: 0 0 100%; }
+  .title-link .big { font-size:38px; letter-spacing:2px; }
+  .subtitle { font-size:14px; }
+  header .logo-text { margin-bottom:6px; }
+  .nav-icons img { width:22px; height:22px; }
 }
 </style>
 </head>
@@ -148,7 +80,10 @@ header h1 {
 <body>
 
 <header>
-  <h1>Put Your Headset On</h1>
+  <!-- سمت چپ: لوگو + تکست -->
+  <div class="logo-text">Put Your Headset On</div>
+
+  <!-- سمت راست: آیکون‌ها -->
   <div class="nav-icons">
     <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/app.png" alt="Home"></a>
     <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/social-media.png" alt="Social"></a>
