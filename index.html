@@ -41,7 +41,7 @@
     height: 80px;
   }
 
-  /* بخش body */
+  /* بخش body با تیتر و عکس */
   .body-section {
     display: flex;
     justify-content: center;
@@ -61,8 +61,21 @@
     border-radius: 10px;
   }
 
+  /* تیتر بزرگ لینک‌دار */
+  .body-right a.title-link {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .body-right a.title-link:hover {
+    text-decoration: underline;
+  }
+
   .body-right p {
     font-size: 18px;
+    margin-top: 10px;
     text-align: left;
   }
 
@@ -83,7 +96,7 @@
     background: #ccc;
   }
 
-  /* موبایل: عکس و متن کنار هم و کمی کوچکتر */
+  /* موبایل: عکس و متن کنار هم، تیتر بزرگ کوچک شود */
   @media (max-width: 600px) {
     .body-section {
       gap: 10px;
@@ -91,9 +104,8 @@
     .body-left, .body-right {
       max-width: 45%;
     }
-    .body-left img {
-      max-width: 100%;
-      height: auto;
+    .body-right a.title-link {
+      font-size: 22px;
     }
     .body-right p {
       font-size: 14px;
@@ -114,8 +126,9 @@
       <img src="https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0391.png" alt="Sample Image">
     </div>
     <div class="body-right">
-      <p>Welcome to our minimal site! This section has an image on the left and text on the right.</p>
-      <p>Use this space to introduce content, products, or any description.</p>
+      <a href="https://example.com" class="title-link">The HASTI</a>
+      <p>Welcome to our minimal site! This section has an image on the left and a large linked title on the right.</p>
+      <p>Use this space to describe your project, product, or any content.</p>
       <a href="#" class="btn">Learn More</a>
     </div>
   </div>
