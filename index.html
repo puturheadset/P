@@ -23,25 +23,43 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #000;
     border-bottom: 1px dashed #555;
     z-index: 1000;
+    text-align: center;
+    padding: 10px 0;
   }
 
   .logo {
     font-size: 32px;
     font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  /* منو لینک‌ها */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 16px;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: #ccc;
   }
 
   .spacer {
-    height: 80px;
+    height: 120px; /* فاصله برای هدر بزرگ‌تر با لینک‌ها */
   }
 
-  /* بخش body با تیتر و عکس */
+  /* بخش body */
   .body-section {
     display: flex;
     justify-content: center;
@@ -67,7 +85,7 @@
     text-align: left;
     line-height: 1.1;
     color: #fff; /* رنگ سفید */
-    text-decoration: none; /* حذف underline */
+    text-decoration: none;
   }
 
   .body-right .title .line1 {
@@ -105,6 +123,10 @@
     .body-right p.subtitle {
       font-size: 16px;
     }
+    .nav-links {
+      gap: 12px;
+      font-size: 14px;
+    }
   }
 </style>
 </head>
@@ -112,6 +134,11 @@
 
   <div class="header">
     <div class="logo">Put Your Headset On</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
   </div>
 
   <div class="spacer"></div>
