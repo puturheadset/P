@@ -42,7 +42,7 @@ header .nav-icons img:hover {
   opacity:1; 
 }
 
-.header-space { height:50px; } /* فاصله هدر */
+.header-space { height:30px; } /* فاصله هدر */
 
 /* ===== LAST RELEASE TITLE ===== */
 .last-release-title {
@@ -56,14 +56,14 @@ header .nav-icons img:hover {
 .last-release {
   background-color: #111; 
   border-radius: 20px;
-  padding: 8px;
+  padding: 3px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 12px;         
   box-shadow: 0 6px 20px rgba(0,0,0,0.6);
   flex-wrap: nowrap;   
-  margin: 10px 10px;
+  margin: 5px 5px;
 }
 
 /* IMAGE */
