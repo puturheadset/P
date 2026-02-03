@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Put Your Headset On</title>
 
-<!-- فونت Libre Baskerville -->
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<!-- فونت Alumni Sans Pinstripe -->
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
 
 <style>
   /* تنظیمات پایه */
   body {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000; /* پس‌زمینه مشکی */
@@ -20,19 +20,30 @@
     text-align: center;
   }
 
-  /* هدر با لوگو در مرکز */
+  /* هدر ثابت بالای صفحه */
   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    border-bottom: 1px dashed #555; /* خط چین پایین هدر */
+    background-color: #000;
+    border-bottom: 1px dashed #555;
+    z-index: 1000;
   }
 
   .logo {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: normal;
     color: #fff;
+  }
+
+  /* فضای خالی برای جلوگیری از پوشانده شدن محتوا توسط هدر */
+  .spacer {
+    height: 80px;
   }
 
   /* محتوای اصلی */
@@ -79,10 +90,16 @@
     <div class="logo">Put Your Headset On</div>
   </div>
 
+  <!-- Spacer برای جلوگیری از پوشیده شدن محتوا -->
+  <div class="spacer"></div>
+
   <div class="content">
-    <p>Welcome! This is a minimal, mobile-friendly page with a black background and a centered header.</p>
-    <p>The font for the entire website is Libre Baskerville, giving a classic and elegant look.</p>
+    <p>Welcome! This is a minimal, mobile-friendly page with a black background and a fixed header.</p>
+    <p>The font for the entire website is Alumni Sans Pinstripe, giving a sleek and stylish look.</p>
+    <p>Scroll down to see that the header stays at the top.</p>
     <a href="#" class="btn">Sample Button</a>
+
+    <p style="margin-top: 800px;">This is content far below to test scrolling behavior.</p>
   </div>
 
 </body>
