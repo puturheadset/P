@@ -5,67 +5,177 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Put Your Headset On</title>
 
-<!-- فونت Lexend -->
+<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
   body {
-    font-family: 'Lexend', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #000;
+    font-family: 'Lexend', sans-serif;
+    background: #000;
     color: #fff;
   }
 
-  /* هدر ثابت */
-  .header {
+  /* ===== HEADER ===== */
+  header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    background-color: #000;
-    border-bottom: 1px dashed #555;
+    background: #000;
     z-index: 1000;
     text-align: center;
-    padding: 10px 0;
+    padding: 14px 0 12px;
+    border-bottom: 1px dashed #444;
   }
 
-  .logo {
-    font-size: 26px; /* کمی کوچک‌تر شد */
-    font-weight: 700;
-    margin-bottom: 10px;
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 
-  /* آیکون‌های مینیمال */
-  .icon-links {
+  .nav-icons {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 28px;
   }
 
-  .icon-links a img {
-    width: 28px; /* سایز لوگو */
-    height: 28px;
-    filter: invert(100%); /* سفید */
-    transition: transform 0.2s;
+  .nav-icons a img {
+    width: 26px;
+    height: 26px;
+    filter: invert(100%);
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
   }
 
-  .icon-links a img:hover {
-    transform: scale(1.2);
+  .nav-icons a img:hover {
+    opacity: 1;
+    transform: scale(1.15);
   }
 
-  .spacer {
-    height: 110px; /* فاصله برای هدر */
+  .header-space {
+    height: 110px;
   }
 
-  /* بخش body */
-  .body-section {
+  /* ===== BODY ===== */
+  .content {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 32px;
     padding: 20px;
-    gap: 20px;
   }
 
-  .body-left, .body-right {
+  .image-box {
     flex: 1;
-   
+    max-width: 45%;
+  }
+
+  .image-box img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .text-box {
+    flex: 1;
+    max-width: 45%;
+  }
+
+  .title-link {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.05;
+  }
+
+  .title-link .small {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .title-link .big {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ccc;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    header h1 {
+      font-size: 18px;
+    }
+
+    .nav-icons {
+      gap: 20px;
+    }
+
+    .nav-icons a img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .content {
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .image-box,
+    .text-box {
+      max-width: 100%;
+    }
+
+    .title-link .small {
+      font-size: 18px;
+    }
+
+    .title-link .big {
+      font-size: 40px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Put Your Headset On</h1>
+  <div class="nav-icons">
+    <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/icons/home.svg" alt="Home"></a>
+    <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/icons/about.svg" alt="About"></a>
+    <a href="#"><img src="https://raw.githubusercontent.com/puturheadset/P/main/images/icons/contact.svg" alt="Contact"></a>
+  </div>
+</header>
+
+<div class="header-space"></div>
+
+<section class="content">
+  <div class="image-box">
+    <img src="https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0391.png" alt="Album Image">
+  </div>
+
+  <div class="text-box">
+    <a href="#" class="title-link">
+      <div class="small">The</div>
+      <div class="big">HASTI</div>
+    </a>
+    <div class="subtitle">The Hasti Album</div>
+  </div>
+</section>
+
+</body>
+</html>
