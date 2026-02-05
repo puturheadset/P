@@ -1,46 +1,65 @@
 /* ===== GLOBAL ===== */
 * { box-sizing: border-box; margin:0; padding:0; }
-body { font-family:'Lexend',sans-serif; background:#000; color:#fff; }
+body {
+  font-family:'Lexend',sans-serif;
+  background:#000;
+  color:#fff;
+}
 
 /* ===== HEADER ===== */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #000;
-  border-bottom:1px dashed #444;
+  background: #f2f2f2; /* سفید ملایم هماهنگ */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
   z-index: 1000;
+  color: #000;
 }
 
-header .logo-text { 
-  font-size: 18px; 
-  font-weight: 500; 
-  letter-spacing: 1px; 
+/* محو شدن پایین هدر */
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(
+    to bottom,
+    rgba(242,242,242,1),
+    rgba(0,0,0,0)
+  );
 }
 
-header .nav-icons { 
-  display: flex; 
-  gap: 24px; 
+header .logo-text {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-header .nav-icons img { 
-  width: 26px; 
-  height: 26px; 
-  filter: invert(100%); 
-  opacity:0.85; 
-  transition: transform 0.2s ease, opacity 0.2s ease; 
+header .nav-icons {
+  display: flex;
+  gap: 24px;
 }
 
-header .nav-icons img:hover { 
-  transform: scale(1.15); 
-  opacity:1; 
+header .nav-icons img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.header-space { height:50px; }
+header .nav-icons img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* فاصله بعد از هدر */
+.header-space { height:72px; }
 
 /* ===== PHRASE LINK ===== */
 .phrase-link {
@@ -50,7 +69,6 @@ header .nav-icons img:hover {
   font-size: 22px;
   line-height: 1.25;
   margin: 14px 20px 10px 20px;
-  opacity: 0.95;
 }
 
 /* ===== LAST RELEASE TITLE ===== */
@@ -116,9 +134,18 @@ header .nav-icons img:hover {
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
-  header { padding:12px 16px; }
-  header .nav-icons { gap:16px; }
-  header .nav-icons img { width:22px; height:22px; }
+  header {
+    padding:12px 16px;
+  }
+
+  header .nav-icons {
+    gap:16px;
+  }
+
+  header .nav-icons img {
+    width:22px;
+    height:22px;
+  }
 
   .phrase-link {
     font-size: 20px;
