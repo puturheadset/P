@@ -19,9 +19,10 @@ header {
   display: flex;
   justify-content: center; /* لوگو وسط */
   align-items: flex-start;
-  padding-top: 100px; /* لوگو روی قسمت روشن بالای عکس */
+  padding-top: 120px; /* لوگو پایین‌تر روی قسمت روشن عکس */
   color: #000;
   text-align: center;
+  flex-direction: row; /* لوگو یک خط */
 }
 
 /* fade پایین عکس برای اتصال به بادی */
@@ -37,7 +38,7 @@ header::after {
 
 /* لوگو */
 header .logo-text {
-  font-size: 24px; /* کمی کوچکتر */
+  font-size: 22px; /* کمی کوچک‌تر */
   font-weight: 700;
   letter-spacing: 2px;
   white-space: nowrap; /* یک خط */
@@ -121,12 +122,13 @@ header .logo-text {
 @media(max-width:768px){
   header {
     height: 50vh; /* تقریبا نصف صفحه موبایل */
-    padding-top: 40px; /* لوگو روی قسمت روشن بالای عکس */
+    padding-top: 40px; /* لوگو پایین‌تر روی قسمت روشن عکس */
     background-position: top center; /* قسمت روشن عکس بالا قرار گیرد */
+    flex-direction: row; /* لوگو یک خط */
   }
 
   .logo-text {
-    font-size: 20px; /* لوگو کمی کوچک‌تر روی موبایل */
+    font-size: 18px; /* کمی کوچک‌تر روی موبایل */
   }
 
   .phrase-link {
