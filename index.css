@@ -120,15 +120,18 @@ header .logo-text {
 /* ===== MOBILE ===== */
 @media(max-width:768px){
   header {
-    height:220px; /* ارتفاع هدر موبایل */
-    padding-top:60px; /* لوگو پایین‌تر روی عکس */
+    height: 50vh; /* تقریبا نصف صفحه موبایل */
+    padding-top: 40px; /* لوگو روی قسمت روشن بالای عکس */
+    background-position: top center; /* قسمت روشن عکس بالا قرار گیرد */
   }
 
   .logo-text {
-    font-size:20px; /* لوگو کمی کوچک‌تر روی موبایل */
+    font-size: 20px; /* لوگو کمی کوچک‌تر روی موبایل */
   }
 
   .phrase-link {
     font-size: 20px;
   }
+
+  .header-space { height: 50vh; } /* فاصله بعد از هدر موبایل */
 }
