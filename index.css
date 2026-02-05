@@ -50,9 +50,9 @@ header::after {
 /* ===== SOCIAL MEDIA ===== */
 .social-media {
   position:absolute;
-  bottom:60px;
+  bottom:40px;
   display:flex;
-  gap:0px; /* گپ صفر */
+  gap:16px; /* گپ صفر */
   z-index:2;
 }
 .social-media img {
@@ -75,7 +75,7 @@ main { padding:16px 14px 40px; }
   gap:12px;
   margin:10px 10px 14px;
 }
-.quote-line { width:2px; height:46px; background:#fff; opacity:0.35; margin-top:4px; }
+.quote-line { width:2px; height:46px; background:#fff; opacity:0.35; margin-top:0px; }
 .section-title a {
   text-decoration:none;
   color:#fff;
