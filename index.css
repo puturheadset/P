@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: center; /* لوگو وسط */
   align-items: flex-start;
-  padding-top: 120px; /* لوگو پایین‌تر روی قسمت روشن عکس */
+  padding-top: 150px; /* لوگو پایین‌تر روی قسمت روشن عکس */
   color: #000;
   text-align: center;
   flex-direction: row; /* لوگو یک خط */
@@ -38,7 +38,7 @@ header::after {
 
 /* لوگو */
 header .logo-text {
-  font-size: 22px; /* کمی کوچک‌تر */
+  font-size: 20px; /* کمی کوچک‌تر */
   font-weight: 700;
   letter-spacing: 2px;
   white-space: nowrap; /* یک خط */
