@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: center; /* لوگو وسط */
   align-items: flex-start;
-  padding-top: 150px; /* لوگو پایین‌تر روی قسمت روشن عکس */
+  padding-top: 500px; /* لوگو پایین‌تر روی قسمت روشن عکس */
   color: #000;
   text-align: center;
   flex-direction: row; /* لوگو یک خط */
