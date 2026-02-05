@@ -50,7 +50,7 @@ header::after {
 /* ===== SOCIAL MEDIA ===== */
 .social-media {
   position:absolute;
-  bottom:40px;
+  bottom:70px;
   display:flex;
   gap:16px; /* گپ صفر */
   z-index:2;
@@ -66,7 +66,7 @@ header::after {
 .social-media img:hover { transform: scale(1.1); opacity:1; }
 
 /* ===== MAIN ===== */
-main { padding:16px 14px 40px; }
+main { padding:5px 14px 40px; }
 
 /* ===== QUOTE ===== */
 .section-title {
@@ -88,7 +88,7 @@ main { padding:16px 14px 40px; }
 .last-release-label {
   font-size:20px;
   font-weight:300;
-  margin:14px 10px 8px;
+  margin:30px 10px 8px;
   position:relative;
   padding-top:6px;
 }
