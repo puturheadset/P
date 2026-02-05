@@ -15,52 +15,59 @@ body {
 header {
   position: relative;
   width: 100%;
-  height: 50vh; /* موبایل: نصف صفحه */
-  min-height: 320px;
-  background-image: url('https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg');
+  height: 55vh; /* موبایل: حدود نصف صفحه */
+  min-height: 420px;
+
+  background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+
+  padding-top: 90px;
 }
 
-/* fade اتصال به بادی */
+/* Fade bottom to black body */
 header::after {
   content: "";
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
-  height: 90px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
 }
 
-/* LOGO */
+/* ===== LOGO ===== */
 .logo-text {
-  margin-top: 90px; /* لوگو کمی پایین‌تر بیاد */
-  font-size: 20px;
+  font-size: 22px;          /* کمی کوچک‌تر */
   font-weight: 500;
   letter-spacing: 2px;
   color: #000;
   text-align: center;
-  white-space: nowrap; /* دو خط نشه */
+  z-index: 2;
+  margin-top: 20px;         /* پایین‌تر آمدن لوگو */
+  white-space: nowrap;     /* حتماً یک‌خطی */
 }
 
 /* ===== SOCIAL MEDIA ===== */
 .social-media {
   position: absolute;
-  bottom: 24px;
+  bottom: 24px;             /* انتهای هدر */
   display: flex;
-  gap: 18px;
+  gap: 20px;
   z-index: 2;
 }
 
 .social-media img {
-  width: 22px;
-  height: 22px;
-  filter: invert(100%);
-  opacity: 0.85;
+  width: 32px;              /* بزرگ‌تر */
+  height: 32px;
+  filter: invert(0%);       /* مشکی */
+  opacity: 0.9;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -69,41 +76,40 @@ header::after {
   opacity: 1;
 }
 
-/* ===== BODY ===== */
+/* ===== MAIN ===== */
 main {
-  padding-top: 24px;
+  padding: 20px 14px;
 }
 
-/* ===== QUOTE ===== */
+/* ===== QUOTE ABOVE LAST RELEASE ===== */
 .section-title {
-  margin: 24px 16px 16px;
+  margin: 20px 10px 14px;
 }
 
 .section-title a {
-  color: #fff;
   text-decoration: none;
-  font-size: 22px;
-  line-height: 1.2;
-  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 400;
 }
 
 /* ===== LAST RELEASE ===== */
 .last-release {
   background-color: #111;
-  border-radius: 14px;
-  padding: 14px;
-  margin: 12px;
+  border-radius: 12px;
+  padding: 12px;
   display: flex;
-  flex-direction: row;      /* همیشه کنار هم */
-  gap: 14px;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  gap: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  flex-wrap: nowrap;
+  margin: 10px;
 }
 
 /* IMAGE */
 .image-box {
   flex: 0 0 45%;
-  max-width: 45%;
 }
 
 .image-box img {
@@ -116,7 +122,6 @@ main {
 /* TEXT */
 .text-box {
   flex: 0 0 55%;
-  max-width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,22 +152,17 @@ main {
 
 /* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
-
   header {
-    height: 380px;
+    height: 70vh;
+    padding-top: 120px;
   }
 
   .logo-text {
-    margin-top: 120px;
-    font-size: 22px;
-  }
-
-  .section-title a {
     font-size: 26px;
   }
 
-  .last-release {
-    max-width: 900px;
-    margin: 24px auto;
+  .social-media img {
+    width: 36px;
+    height: 36px;
   }
 }
