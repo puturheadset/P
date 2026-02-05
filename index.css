@@ -46,7 +46,7 @@ header::after {
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #000;
+  color: #fff;
   z-index: 2;
   white-space: nowrap;
   margin-top: 14px; /* بالاتر رفت */
@@ -63,7 +63,7 @@ header::after {
   position: absolute;
   bottom: 60px; /* کمی بالاتر */
   display: flex;
-  gap: 0; /* بدون فاصله */
+  gap: 16; /* بدون فاصله */
   z-index: 2;
 }
 
