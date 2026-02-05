@@ -11,62 +11,14 @@ body {
   color: #fff;
 }
 
-/* ===== HEADER اول ===== */
-#first-header {
-  position: relative; /* ثابت نیست، اسکرول می‌شود */
-  width: 100%;
-  height: 60px;
-  background: #9E9E9E;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  z-index: 1000;
-  color: #000;
-}
-
-#first-header::after {
-  content: "";
-  position: absolute;
-  bottom: -24px;
-  left: 0;
-  width: 100%;
-  height: 24px;
-  background: linear-gradient(to bottom, rgba(242,242,242,1), rgba(0,0,0,0));
-}
-
-#first-header .logo-text {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-#first-header .nav-icons {
-  display: flex;
-  gap: 24px;
-}
-
-#first-header .nav-icons img {
-  width: 26px;
-  height: 26px;
-  opacity: 0.9;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-#first-header .nav-icons img:hover {
-  transform: scale(1.15);
-  opacity: 1;
-}
-
-/* ===== HEADER دوم ===== */
-#second-header {
+/* ===== HEADER ===== */
+header {
   position: relative;
   width: 100%;
   height: 55vh;
   min-height: 420px;
 
-  background-color: #9E9E9E; /* برای fade بالای عکس */
-  background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg");
+  background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/385C61CE-AE2B-45B6-BEDD-DB8915424558.gif");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -75,25 +27,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 60px;
-  overflow: hidden;
-  transition: all 0.5s ease;
+  padding-top: 60px; /* لوگو کمی بالاتر */
+  transition: all 0.5s ease; /* fade نرم */
 }
 
-/* محو بالای عکس برای اتصال با هدر اول */
-#second-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  background: linear-gradient(to bottom, #9E9E9E 0%, rgba(158,158,158,0) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* محو پایین هدر دوم برای اتصال به بادی */
-#second-header::after {
+header::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -103,35 +41,47 @@ body {
   pointer-events: none;
 }
 
-/* لوگو وسط هدر دوم */
-#second-header .logo-text {
+/* ===== LOGO ===== */
+.logo-text {
   font-size: 22px;
   font-weight: 500;
+  letter-spacing: 2px;
   color: #000;
   z-index: 2;
   white-space: nowrap;
-  margin-top: 14px;
+  margin-top: 14px; /* بالاتر رفت */
+  opacity: 0;
+  animation: fadeInLogo 1s forwards;
 }
 
-/* سوشیال مدیا پایین لوگو */
-#second-header .social-media {
+@keyframes fadeInLogo {
+  to { opacity: 1; }
+}
+
+/* ===== SOCIAL MEDIA ===== */
+.social-media {
   position: absolute;
-  bottom: 60px;
+  bottom: 60px; /* کمی بالاتر */
   display: flex;
-  gap: 0;
+  gap: 0; /* بدون فاصله */
   z-index: 2;
 }
 
-#second-header .social-media img {
+.social-media img {
   width: 28px;
   height: 28px;
   background: #fff;
-  padding: 8px;
+  padding: 0px;
   border-radius: 8px;
+  filter: invert(0%);
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* ===== HEADER SPACE ===== */
-.header-space { height: 60px; }
+.social-media img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
 
 /* ===== MAIN ===== */
 main {
@@ -157,16 +107,17 @@ main {
   font-weight: 300;
   margin: 14px 10px 8px;
   position: relative;
-  padding-top: 6px;
+  padding-top: 6px; /* خط بالای تکست */
 }
 
+/* خط جداکننده مینیمال بالای تکست */
 .last-release-label::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: #fff;
-  opacity: 0.3;
+  opacity: 0.3; /* نازک و مینیمال */
   margin-bottom: 6px;
 }
 
@@ -199,6 +150,7 @@ main {
   );
 }
 
+/* TEXT */
 .text-box {
   position: relative;
   z-index: 2;
@@ -227,31 +179,14 @@ main {
   color: #ddd;
 }
 
-/* ===== INFO SECTION ===== */
-.info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 10px;
-}
-
-.info-box {
-  flex: 1 1 30%;
-  background-color: #111;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-  color: #fff;
-}
-
 /* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
-  #second-header {
+  header {
     height: 70vh;
     padding-top: 90px;
   }
 
-  #second-header .logo-text {
+  .logo-text {
     font-size: 26px;
   }
 
@@ -263,7 +198,7 @@ main {
     font-size: 40px;
   }
 
-  #second-header .social-media img {
+  .social-media img {
     width: 32px;
     height: 32px;
     padding: 10px;
