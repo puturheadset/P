@@ -18,7 +18,7 @@ header {
   height: 55vh;
   min-height: 420px;
 
-  background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/385C61CE-AE2B-45B6-BEDD-DB8915424558.gif");
+  background-image: url("https://github.com/puturheadset/P/raw/refs/heads/main/images/IMG_0554.jpeg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@ header::after {
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #fff;
+  color: #000;
   z-index: 2;
   white-space: nowrap;
   margin-top: 14px; /* بالاتر رفت */
@@ -63,7 +63,7 @@ header::after {
   position: absolute;
   bottom: 60px; /* کمی بالاتر */
   display: flex;
-  gap: 16; /* بدون فاصله */
+  gap: 20; /* بدون فاصله */
   z-index: 2;
 }
 
