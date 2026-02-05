@@ -11,14 +11,44 @@ body {
   color: #fff;
 }
 
-/* ===== HEADER ===== */
-header {
+/* ===== HEADER اول ===== */
+#first-header {
+  position: relative; /* ثابت نیست */
+  width: 100%;
+  height: 60px;
+  background-color: #9E9E9E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 900;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+#first-header .logo-left {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#first-header .nav-icons {
+  display: flex;
+  gap: 16px;
+}
+
+#first-header .nav-icons img {
+  width: 26px;
+  height: 26px;
+  filter: invert(0%);
+}
+
+/* ===== HEADER دوم ===== */
+#second-header {
   position: relative;
   width: 100%;
   height: 55vh;
   min-height: 420px;
 
-  background-color: #9E9E9E; /* رنگ پشت عکس */
+  background-color: #9E9E9E; /* برای fade بالای عکس */
   background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg");
   background-size: cover;
   background-position: center top;
@@ -28,13 +58,13 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 60px; /* لوگو کمی بالاتر */
+  padding-top: 60px;
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
-/* محو خیلی کم بالای عکس */
-header::before {
+/* محو بالای عکس برای اتصال با هدر اول */
+#second-header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -45,8 +75,8 @@ header::before {
   pointer-events: none;
 }
 
-/* محو پایین هدر برای اتصال به بادی */
-header::after {
+/* محو پایین هدر دوم برای اتصال به بادی */
+#second-header::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -56,47 +86,35 @@ header::after {
   pointer-events: none;
 }
 
-/* ===== LOGO ===== */
-.logo-text {
+/* لوگو وسط هدر دوم */
+#second-header .logo-text {
   font-size: 22px;
   font-weight: 500;
-  letter-spacing: 2px;
   color: #000;
   z-index: 2;
   white-space: nowrap;
-  margin-top: 14px; /* لوگو کمی بالاتر */
-  opacity: 0;
-  animation: fadeInLogo 1s forwards;
+  margin-top: 14px;
 }
 
-@keyframes fadeInLogo {
-  to { opacity: 1; }
-}
-
-/* ===== SOCIAL MEDIA ===== */
-.social-media {
+/* سوشیال مدیا پایین لوگو */
+#second-header .social-media {
   position: absolute;
-  bottom: 60px; /* کمی بالاتر */
+  bottom: 60px;
   display: flex;
-  gap: 0; /* بدون فاصله */
+  gap: 0;
   z-index: 2;
 }
 
-.social-media img {
+#second-header .social-media img {
   width: 28px;
   height: 28px;
   background: #fff;
   padding: 8px;
   border-radius: 8px;
-  filter: invert(0%);
-  opacity: 0.9;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.social-media img:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
+/* ===== HEADER SPACE ===== */
+.header-space { height: 60px; }
 
 /* ===== MAIN ===== */
 main {
@@ -122,17 +140,16 @@ main {
   font-weight: 300;
   margin: 14px 10px 8px;
   position: relative;
-  padding-top: 6px; /* فاصله برای خط بالای تکست */
+  padding-top: 6px;
 }
 
-/* خط جداکننده بالای تکست Last Release */
 .last-release-label::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: #fff;
-  opacity: 0.3; /* مینیمال و نازک */
+  opacity: 0.3;
   margin-bottom: 6px;
 }
 
@@ -165,7 +182,6 @@ main {
   );
 }
 
-/* TEXT */
 .text-box {
   position: relative;
   z-index: 2;
@@ -194,14 +210,31 @@ main {
   color: #ddd;
 }
 
+/* ===== INFO SECTION ===== */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 10px;
+}
+
+.info-box {
+  flex: 1 1 30%;
+  background-color: #111;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+}
+
 /* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
-  header {
+  #second-header {
     height: 70vh;
     padding-top: 90px;
   }
 
-  .logo-text {
+  #second-header .logo-text {
     font-size: 26px;
   }
 
@@ -213,7 +246,7 @@ main {
     font-size: 40px;
   }
 
-  .social-media img {
+  #second-header .social-media img {
     width: 32px;
     height: 32px;
     padding: 10px;
