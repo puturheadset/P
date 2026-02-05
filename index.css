@@ -11,15 +11,15 @@ body {
 header {
   position: relative; /* هدر غیر ثابت */
   width: 100%;
-  height: 300px; /* ارتفاع هدر */
-  background-image: url('https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0553.jpeg');
-  background-size: cover; /* کل عکس نمایش داده شود */
+  height: 300px; /* ارتفاع هدر دسکتاپ */
+  background-image: url('https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg');
+  background-size: cover; /* کل عکس هدر */
   background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center; /* لوگو وسط */
   align-items: flex-start;
-  padding-top: 100px; /* لوگو پایین‌تر روی قسمت روشن عکس */
+  padding-top: 100px; /* لوگو روی قسمت روشن بالای عکس */
   color: #000;
   text-align: center;
 }
@@ -120,12 +120,12 @@ header .logo-text {
 /* ===== MOBILE ===== */
 @media(max-width:768px){
   header {
-    height:220px;
-    padding-top:60px;
+    height:220px; /* ارتفاع هدر موبایل */
+    padding-top:60px; /* لوگو پایین‌تر روی عکس */
   }
 
   .logo-text {
-    font-size:20px;
+    font-size:20px; /* لوگو کمی کوچک‌تر روی موبایل */
   }
 
   .phrase-link {
