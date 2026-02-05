@@ -46,7 +46,7 @@ header::after {
   color: #000;
   z-index: 2;
   white-space: nowrap;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 /* ===== SOCIAL MEDIA ===== */
@@ -64,7 +64,7 @@ header::after {
   height: 28px;
 
   background: #fff;          /* بک‌گراند سفید جداگانه */
-  padding: 8px;              /* فاصله دور آیکون */
+  padding: 4px;              /* فاصله دور آیکون */
   border-radius: 8px;        /* کروی مینیمال */
 
   filter: invert(0%);        /* آیکون مشکی */
