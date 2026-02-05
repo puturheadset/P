@@ -21,6 +21,7 @@ header {
   background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg");
   background-size: cover;
   background-position: center top;
+  background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
@@ -53,15 +54,28 @@ header::after {
   position: absolute;
   bottom: 24px;
   display: flex;
-  gap: 20px;
+  gap: 16px;
   z-index: 2;
 }
 
+/* each icon box */
 .social-media img {
-  width: 32px;
-  height: 32px;
-  filter: invert(0%);
+  width: 28px;
+  height: 28px;
+
+  background: #fff;          /* بک‌گراند سفید جداگانه */
+  padding: 8px;              /* فاصله دور آیکون */
+  border-radius: 8px;        /* کروی مینیمال */
+
+  filter: invert(0%);        /* آیکون مشکی */
   opacity: 0.9;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 /* ===== MAIN ===== */
@@ -89,7 +103,7 @@ main {
   margin: 14px 10px 8px;
 }
 
-/* ===== LAST RELEASE BOX ===== */
+/* ===== LAST RELEASE ===== */
 .last-release {
   position: relative;
   height: 160px;
@@ -108,7 +122,6 @@ main {
   box-shadow: 0 6px 20px rgba(0,0,0,0.6);
 }
 
-/* dark overlay for readability */
 .last-release .overlay {
   position: absolute;
   inset: 0;
@@ -165,5 +178,12 @@ main {
 
   .title-link .big {
     font-size: 40px;
+  }
+
+  .social-media img {
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
