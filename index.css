@@ -26,7 +26,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 90px;
+  justify-content: flex-start;
+  padding-top: 60px; /* لوگو کمی بالاتر رفت */
+  transition: all 0.5s ease; /* fade نرم */
 }
 
 header::after {
@@ -36,6 +38,7 @@ header::after {
   width: 100%;
   height: 120px;
   background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
+  pointer-events: none;
 }
 
 /* ===== LOGO ===== */
@@ -46,30 +49,32 @@ header::after {
   color: #000;
   z-index: 2;
   white-space: nowrap;
-  margin-top: 10px;
+  margin-top: 14px; /* بالاتر رفت */
+  opacity: 0;
+  animation: fadeInLogo 1s forwards;
+}
+
+@keyframes fadeInLogo {
+  to { opacity: 1; }
 }
 
 /* ===== SOCIAL MEDIA ===== */
 .social-media {
   position: absolute;
-  bottom: 24px;
+  bottom: 60px; /* کمی بالاتر از قبل */
   display: flex;
   gap: 16px;
   z-index: 2;
 }
 
-/* each icon box */
 .social-media img {
   width: 28px;
   height: 28px;
-
-  background: #fff;          /* بک‌گراند سفید جداگانه */
-  padding: 0px;              /* فاصله دور آیکون */
-  border-radius: 8px;        /* کروی مینیمال */
-
-  filter: invert(0%);        /* آیکون مشکی */
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  filter: invert(0%);
   opacity: 0.9;
-
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -101,6 +106,19 @@ main {
   font-size: 20px;
   font-weight: 300;
   margin: 14px 10px 8px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+/* خط جداکننده مینیمال */
+.last-release-label::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  opacity: 0.3; /* نازک و مینیمال */
+  margin-top: 4px;
 }
 
 /* ===== LAST RELEASE ===== */
@@ -165,7 +183,7 @@ main {
 @media (min-width: 1024px) {
   header {
     height: 70vh;
-    padding-top: 120px;
+    padding-top: 90px;
   }
 
   .logo-text {
