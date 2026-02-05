@@ -1,139 +1,168 @@
 /* ===== GLOBAL ===== */
-* { box-sizing: border-box; margin:0; padding:0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family:'Lexend',sans-serif;
-  background:#000;
-  color:#fff;
-  line-height:1.6;
+  font-family: 'Lexend', sans-serif;
+  background: #000;
+  color: #fff;
 }
 
 /* ===== HEADER ===== */
 header {
-  position: relative; /* هدر غیر ثابت */
+  position: relative;
   width: 100%;
-  height: 300px; /* ارتفاع هدر دسکتاپ */
+  height: 50vh; /* موبایل: نصف صفحه */
+  min-height: 320px;
   background-image: url('https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg');
-  background-size: cover; /* کل عکس هدر */
-  background-position: center center;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center; /* لوگو وسط */
-  align-items: flex-start;
-  padding-top: 500px; /* لوگو پایین‌تر روی قسمت روشن عکس */
-  color: #000;
-  text-align: center;
-  flex-direction: row; /* لوگو یک خط */
+  flex-direction: column;
+  align-items: center;
 }
 
-/* fade پایین عکس برای اتصال به بادی */
+/* fade اتصال به بادی */
 header::after {
-  content:"";
+  content: "";
   position: absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:80px;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
   background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
 }
 
-/* لوگو */
-header .logo-text {
-  font-size: 20px; /* کمی کوچک‌تر */
-  font-weight: 700;
+/* LOGO */
+.logo-text {
+  margin-top: 90px; /* لوگو کمی پایین‌تر بیاد */
+  font-size: 20px;
+  font-weight: 500;
   letter-spacing: 2px;
-  white-space: nowrap; /* یک خط */
+  color: #000;
+  text-align: center;
+  white-space: nowrap; /* دو خط نشه */
 }
 
-/* فاصله بعد از هدر */
-.header-space { height:100px; }
+/* ===== SOCIAL MEDIA ===== */
+.social-media {
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  gap: 18px;
+  z-index: 2;
+}
 
-/* ===== PHRASE LINK ===== */
-.phrase-link {
-  display: block;
+.social-media img {
+  width: 22px;
+  height: 22px;
+  filter: invert(100%);
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* ===== BODY ===== */
+main {
+  padding-top: 24px;
+}
+
+/* ===== QUOTE ===== */
+.section-title {
+  margin: 24px 16px 16px;
+}
+
+.section-title a {
   color: #fff;
   text-decoration: none;
   font-size: 22px;
-  line-height: 1.25;
-  margin: 14px 20px 10px 20px;
-}
-
-/* ===== LAST RELEASE TITLE ===== */
-.last-release-title {
-  font-size: 26px;
-  font-weight: 400;
-  margin: 6px 20px 4px 20px;
+  line-height: 1.2;
+  display: inline-block;
 }
 
 /* ===== LAST RELEASE ===== */
 .last-release {
   background-color: #111;
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 12px;
   display: flex;
+  flex-direction: row;      /* همیشه کنار هم */
+  gap: 14px;
   align-items: center;
-  gap: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-  margin: 10px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
 }
 
 /* IMAGE */
 .image-box {
-  flex: 0 0 55%;
-  max-width: 120px;
+  flex: 0 0 45%;
+  max-width: 45%;
 }
 
 .image-box img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   display: block;
 }
 
 /* TEXT */
 .text-box {
-  flex: 0 0 45%;
+  flex: 0 0 55%;
+  max-width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.title-link { text-decoration:none; color:#fff; line-height:1.05; }
-.title-link .small { font-size:16px; font-weight:400; }
-.title-link .big { font-size:24px; font-weight:700; letter-spacing:2px; }
-.subtitle { font-size:12px; margin-top:4px; color:#bbb; }
-
-/* ===== INFO SECTION ===== */
-.info-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin: 20px;
+.title-link {
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.05;
 }
 
-.info-box {
-  flex: 0 0 30%;
-  background-color: #111;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+.title-link .small {
+  font-size: 14px;
+  font-weight: 400;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
+.title-link .big {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #bbb;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1024px) {
+
   header {
-    height: 50vh; /* تقریبا نصف صفحه موبایل */
-    padding-top: 40px; /* لوگو پایین‌تر روی قسمت روشن عکس */
-    background-position: top center; /* قسمت روشن عکس بالا قرار گیرد */
-    flex-direction: row; /* لوگو یک خط */
+    height: 380px;
   }
 
   .logo-text {
-    font-size: 18px; /* کمی کوچک‌تر روی موبایل */
+    margin-top: 120px;
+    font-size: 22px;
   }
 
-  .phrase-link {
-    font-size: 20px;
+  .section-title a {
+    font-size: 26px;
   }
 
-  .header-space { height: 50vh; } /* فاصله بعد از هدر موبایل */
+  .last-release {
+    max-width: 900px;
+    margin: 24px auto;
+  }
 }
