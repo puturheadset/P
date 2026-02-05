@@ -73,7 +73,7 @@ main { padding:16px 14px 40px; }
   display:flex;
   align-items:flex-start;
   gap:12px;
-  margin:10px 10px 14px;
+  margin:0px 10px 14px;
 }
 .quote-line { width:2px; height:46px; background:#fff; opacity:0.35; margin-top:0px; }
 .section-title a {
