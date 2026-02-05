@@ -9,31 +9,31 @@ body {
 
 /* ===== HEADER ===== */
 header {
-  position: relative; /* دیگه fixed نیست */
+  position: relative; /* غیر ثابت */
   width: 100%;
-  height: 300px; /* ارتفاع بیشتر برای نمایش بیشتر عکس */
-  background-image: url('https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0553.jpeg');
-  background-size: cover; /* zoom بیشتر */
-  background-position: center center;
+  height: 280px; /* ارتفاع مناسب */
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(0,0,0,0.7)), 
+                    url('https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0553.jpeg');
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center; /* لوگو وسط */
-  align-items: flex-end; /* لوگو پایین‌تر قرار بگیرد */
-  padding-bottom: 60px; /* فاصله از پایین هدر */
-  z-index: 1000;
-  color: #000; /* لوگو مشکی */
-  text-shadow: 0 0 4px rgba(255,255,255,0.3); /* کمی بهتر دیده شود روی عکس */
-}
-
-header .logo-text {
-  font-size: 36px; /* بزرگ‌تر */
-  font-weight: 700;
-  letter-spacing: 2px;
+  align-items: flex-start;
+  padding-top: 90px; /* لوگو پایین‌تر، روی قسمت روشن عکس */
+  color: #000;
   text-align: center;
 }
 
+header .logo-text {
+  font-size: 28px; /* اندازه متوسط، یک خط */
+  font-weight: 700;
+  letter-spacing: 2px;
+  white-space: nowrap; /* جلوگیری از شکستن به دو خط */
+}
+
 /* فاصله بعد از هدر */
-.header-space { height:300px; }
+.header-space { height:280px; }
 
 /* ===== PHRASE LINK ===== */
 .phrase-link {
@@ -110,19 +110,14 @@ header .logo-text {
 @media(max-width:768px){
   header {
     height:220px;
-    padding-bottom:40px;
+    padding-top:60px;
   }
 
   .logo-text {
-    font-size:28px;
+    font-size:22px;
   }
 
   .phrase-link {
     font-size: 20px;
-  }
-
-  header .nav-icons img {
-    width:22px;
-    height:22px;
   }
 }
