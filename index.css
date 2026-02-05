@@ -15,73 +15,61 @@ body {
 header {
   position: relative;
   width: 100%;
-  height: 55vh; /* موبایل: حدود نصف صفحه */
+  height: 55vh;
   min-height: 420px;
 
   background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0554.jpeg");
   background-size: cover;
   background-position: center top;
-  background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-
   padding-top: 90px;
 }
 
-/* Fade bottom to black body */
 header::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
   height: 120px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
 }
 
 /* ===== LOGO ===== */
 .logo-text {
-  font-size: 22px;          /* کمی کوچک‌تر */
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 2px;
   color: #000;
-  text-align: center;
   z-index: 2;
-  margin-top: 20px;         /* پایین‌تر آمدن لوگو */
-  white-space: nowrap;     /* حتماً یک‌خطی */
+  white-space: nowrap;
+  margin-top: 24px;
 }
 
 /* ===== SOCIAL MEDIA ===== */
 .social-media {
   position: absolute;
-  bottom: 24px;             /* انتهای هدر */
+  bottom: 24px;
   display: flex;
   gap: 20px;
   z-index: 2;
 }
 
 .social-media img {
-  width: 32px;              /* بزرگ‌تر */
+  width: 32px;
   height: 32px;
-  filter: invert(0%);       /* مشکی */
+  filter: invert(0%);
   opacity: 0.9;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.social-media img:hover {
-  transform: scale(1.15);
-  opacity: 1;
 }
 
 /* ===== MAIN ===== */
 main {
-  padding: 20px 14px;
+  padding: 16px 14px 40px;
 }
 
-/* ===== QUOTE ABOVE LAST RELEASE ===== */
+/* ===== QUOTE ===== */
 .section-title {
   margin: 20px 10px 14px;
 }
@@ -94,37 +82,47 @@ main {
   font-weight: 400;
 }
 
-/* ===== LAST RELEASE ===== */
+/* ===== LAST RELEASE LABEL ===== */
+.last-release-label {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 14px 10px 8px;
+}
+
+/* ===== LAST RELEASE BOX ===== */
 .last-release {
-  background-color: #111;
-  border-radius: 12px;
-  padding: 12px;
+  position: relative;
+  height: 160px;
+  margin: 10px;
+  border-radius: 14px;
+
+  background-image: url("https://raw.githubusercontent.com/puturheadset/P/refs/heads/main/images/IMG_0542.jpeg");
+  background-size: cover;
+  background-position: center;
+
   display: flex;
   align-items: center;
-  gap: 12px;
+  padding: 16px;
+
+  overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-  flex-wrap: nowrap;
-  margin: 10px;
 }
 
-/* IMAGE */
-.image-box {
-  flex: 0 0 45%;
-}
-
-.image-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
+/* dark overlay for readability */
+.last-release .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.25)
+  );
 }
 
 /* TEXT */
 .text-box {
-  flex: 0 0 55%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .title-link {
@@ -139,15 +137,15 @@ main {
 }
 
 .title-link .big {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .subtitle {
   font-size: 12px;
   margin-top: 4px;
-  color: #bbb;
+  color: #ddd;
 }
 
 /* ===== DESKTOP ===== */
@@ -161,8 +159,11 @@ main {
     font-size: 26px;
   }
 
-  .social-media img {
-    width: 36px;
-    height: 36px;
+  .last-release {
+    height: 220px;
+  }
+
+  .title-link .big {
+    font-size: 40px;
   }
 }
