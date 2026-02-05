@@ -41,7 +41,7 @@ header::after {
   white-space: nowrap;
   margin-top:14px;
   opacity:0;
-  animation: fadeInLogo 1s forwards;
+  animation: fadeInLogo 5s forwards;
 }
 .logo-dark { color:#000; }
 .logo-light { color:#fff; text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
@@ -56,8 +56,8 @@ header::after {
   z-index:2;
 }
 .social-media img {
-  width:28px;
-  height:28px;
+  width:32px;
+  height:32px;
   background:#fff;
   border-radius:8px;
   opacity:0.9;
