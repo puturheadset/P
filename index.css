@@ -40,20 +40,23 @@ header::after {
   z-index: 2;
   white-space: nowrap;
   margin-top: 14px;
-  opacity: 0;
-  animation: fadeInLogo 1s forwards;
 
-  background: rgba(255, 255, 255, 0.3);
+  /* تقسیم رنگ لوگو به دو رنگ */
+  background: linear-gradient(to right, #000 50%, #fff 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  backdrop-filter: blur(4px);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+  /* کمی سایه برای بهتر دیده شدن */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,255,255,0.3);
+
+  opacity: 0;
+  animation: fadeInLogo 1s forwards;
 }
 
 /* سوشیال مدیا */
 .social-media {
   position: absolute;
-  bottom: 60px; /* بالاتر از لینک */
+  bottom: 80px; /* بالاتر از لینک */
   display: flex;
   gap: 16px;
   z-index: 2;
@@ -121,7 +124,7 @@ main { padding:5px 14px 40px; }
   height:1px;
   background:#fff;
   opacity:0.3;
-  margin-bottom:6px;
+  margin-bottom:16px;
 }
 
 /* ===== LAST RELEASE BOX ===== */
