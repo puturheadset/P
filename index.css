@@ -77,7 +77,8 @@ header::after {
 .header-quote {
   position: absolute;
   bottom: 10px; /* در انتهای هدر */
-  text-align: center;
+  left: 10px;        /* فاصله از چپ صفحه */
+  text-align: left;  
   color: #fff;
   font-size: 20px;
   line-height: 1.3;
