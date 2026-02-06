@@ -75,15 +75,17 @@ header::after {
 
 /* متن لینک در انتهای هدر */
 .header-quote {
-  position: absolute;
-  bottom: 10px; /* در انتهای هدر */
-  left: 10px;        /* فاصله از چپ صفحه */
-  text-align: left;  
+  position: absolute;   /* برای قرار گرفتن در انتهای هدر */
+  bottom: 10px;         /* فاصله از پایین هدر */
+  left: 20px;           /* فاصله از سمت چپ */
+  text-align: left;     /* متن سمت چپ */
   color: #fff;
   font-size: 20px;
   line-height: 1.3;
   font-weight: 400;
-  z-index: 2;
+  z-index: 5;           /* بالای لوگو و سوشیال مدیا */
+  display: block;       /* مطمئن شدن از رفتار block */
+  margin: 0;            /* حذف هر margin قبلی */
 }
 /* ===== MAIN ===== */
 main { padding:5px 14px 40px; }
